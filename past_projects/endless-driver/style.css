@@ -1,0 +1,152 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: green;
+    height: 100%;
+    align-items: center;
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+#road {
+    background-image: url(content/road.png);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    animation: endlessRoad infinite;
+    animation-timing-function: cubic-bezier(0.2, 0.4, 0.2, 1);
+    animation-duration: 400s;
+    height: 100%;
+    width: 416px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.opponent {
+    height: 70px;
+    width: 38.8px;
+    background-size: cover;
+    position: absolute;
+    animation: opponentScroll linear infinite;
+    
+    animation-duration: 8s;
+    z-index: 1;
+}
+
+#start-container{
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#rules-container {
+    color: white;
+    font-size: large;
+    width: 50%;
+}
+
+#stop-container {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#carimg {
+    height: 70px;
+    width: auto;
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    z-index: 2;
+    transition: transform 0.1s;
+}
+
+button {
+    background-color: gray;
+    color: white;
+    font-size: 150%;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: red;
+}
+
+#easy {
+background-color: lightcoral;
+}
+
+.information {
+    padding-top: 100px;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    padding: 5px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+#pause-container {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+}
+
+.driving-surface {
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 255px;
+    height: 100%;
+    position: absolute;
+}
+
+.screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red; 
+    opacity: 0.4;
+}
+
+@keyframes endlessRoad {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 100000px;
+    }
+}
+
+@keyframes opponentScroll {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(2000px);
+    }
+}
+

@@ -1,0 +1,57 @@
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Endless Driver">
+        <meta name="keywords" content="Ian Johnston">
+        <meta name="author" conent="Ian Johnston">
+        <link rel="stylesheet" href="style.css">
+        <title>Endless Driver</title>
+    </head>
+    <body>
+        <div id="start-container">
+            <h1>Welcome to Endless Driver</h1>
+            <div class="levels">
+                <button id="easy">Easy</button>
+                <button id="medium">Medium</button>
+                <button id="hard">Hard</button>
+                <button id="expert">Expert</button>
+            </div>
+            <div class="information">
+                <button id="rules">Rules</button>
+            </div>
+            <div class="start-info">
+                <h2>Hit any key to start!</h2>
+            </div>
+        </div>
+        <div id="rules-container" class="hidden">
+            <h2>Rules:</h2>
+            <ul>
+                <li>Use the left and right arrow keys to merge the car left and right on the road.</li>
+                <li>You can hit multiple cars before the game is over.</li>
+                <li>To pause and unpause, hit the space bar.</li>
+            </ul>
+            <button id="rules-return">Main Menu</button>
+            <p>Picture Credits:</p>
+            <a href="https://railman123456.itch.io/pixel-car-top-down">Truck</a>
+
+        </div>
+        <div id="game-container" class="hidden">
+            <div id="score">Score = 0</div>
+            <div>
+                <div id="car"><img id="carimg" class="carimgclass" src="content/car.png" alt="car"></div>
+            </div>
+            <div class="driving-surface"></div>
+            <div id="road"></div> 
+        </div>
+        <div id="pause-container" class="hidden">
+            <h1>Hit Space Bar to Unpause</h1>
+            <button id="restart">Restart</button>
+        </div>
+        <div id="stop-container" class="hidden">
+            <h1>GAME OVER!</h1>
+            <h2 id="final-score">Score = 0</h2>
+            <button id="return">Main Menu</button>
+        </div>
+            <script src="script.js"></script>
+    </body>
+</html>
